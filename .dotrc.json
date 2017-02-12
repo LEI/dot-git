@@ -1,6 +1,9 @@
 {
     "links": [
-        ".git*"
+        {
+            "type": "file",
+            "path": ".git*"
+        }
     ],
     "template": {
         ".gitconfig.local.tpl": {
