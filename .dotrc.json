@@ -1,8 +1,8 @@
 {
     "links": [
         {
-            "type": "file",
-            "path": ".git*"
+            "pattern": ".git*",
+            "type": "file"
         }
     ],
     "template": [
