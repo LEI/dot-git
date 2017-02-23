@@ -1,8 +1,8 @@
 # Local git configuration
 
 [user]
-  name = {{.Name}}
-  email = {{.Email}}
+  name = {{.UserName}}
+  email = {{.UserEmail}}
 
 [credential]
-  helper = {{.Helper}}
+  helper = {{.CredentialHelper}}
