@@ -2,7 +2,7 @@ link: ".git*"
 template:
   path: ".gitconfig.local.tpl"
   vars:
-    user_name: "$GIT_AUTHOR_NAME"
-    # GIT_AUTHOR_USERNAME
-    user_email: "$GIT_AUTHOR_EMAIL"
-    credential_helper: "{{if OS == 'darwin'}}osxkeychain{{else}}cache{{end}}"
+    GIT_AUTHOR_NAME:
+    GIT_AUTHOR_USERNAME:
+    GIT_AUTHOR_EMAIL:
+    GIT_CREDENTIAL_HELPER: "{{if $OS == 'darwin'}}osxkeychain{{else}}cache{{end}}"
