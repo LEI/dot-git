@@ -5,4 +5,5 @@
   email = {{.GIT_AUTHOR_EMAIL}}
 
 [credential]
-  helper = {{.GIT_CREDENTIAL_HELPER}}
+  helper = {{if eq $OS 'darwin'}}osxkeychain{{else}}cache{{end}}
+  helper2 = {{.GIT_CREDENTIAL_HELPER}}
