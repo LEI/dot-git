@@ -4,3 +4,4 @@
 
 [credential]
   helper = {{if eq .OS "darwin"}}osxkeychain{{else}}cache{{end}}
+  test = {{.CREDENTIAL_HELPER}}
