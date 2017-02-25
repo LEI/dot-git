@@ -1,8 +1,8 @@
 # Local git configuration
 
 [user]
-  name = {{$GIT_AUTHOR_NAME}}
-  email = {{$GIT_AUTHOR_EMAIL}}
+  name = {{.Env.GIT_AUTHOR_NAME}}
+  email = {{.Env.GIT_AUTHOR_EMAIL}}
 
 [credential]
-  helper = {{$GIT_CREDENTIAL_HELPER}}
+  helper = {{.Env.GIT_CREDENTIAL_HELPER}}
