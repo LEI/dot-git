@@ -1,6 +1,6 @@
 link: ".git*"
 template: ".gitconfig.local.tpl"
-# vars:
-#   git_author_name:
-#   git_author_email:
-#   credential_helper: '{{if eq "$OS" "darwin"}}osxkeychain{{else}}cache{{end}}'
+env:
+  git_author_name: Test
+  # git_author_email:
+  # credential_helper: '{{if eq "$OS" "darwin"}}osxkeychain{{else}}cache{{end}}'
