@@ -66,8 +66,8 @@
   # Merge GitHub pull request on top of the current branch or,
   # if a branch name is specified, on top of the specified branch
   mpr = "!f() { \
-    declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
-    declare branch=\"${2:-$currentBranch}\"; \
+    declare current-branch=\"$(git symbolic-ref --short HEAD)\"; \
+    declare branch=\"${2:-$current-branch}\"; \
     if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
       git fetch origin refs/pull/$1/head:pr/$1 && \
       git checkout -B $branch && \
@@ -83,12 +83,13 @@
   hash = rev-parse --short --quiet HEAD # SHA-1
   # repo = "!basename $(git rev-parse --show-toplevel)"
   # git branch --points-at HEAD | awk '{print $NF}'
-  currentBranch = symbolic-ref --short HEAD
-  currentTag = tag --points-at HEAD
+  current-branch = symbolic-ref --short HEAD
+  #current-branch = rev-parse --abbrev-ref HEAD
+  current-tag = tag --points-at HEAD
 
   zip = "!f() { \
-    declare tag=\"$(git currentTag)\"; \
-    declare name=\"$(git currentBranch)-${tag:-$(git hash)}\"; \
+    declare tag=\"$(git current-tag)\"; \
+    declare name=\"$(git current-branch)-${tag:-$(git hash)}\"; \
     git archive --format=zip -o $name.zip HEAD; \
   }; f"
 
