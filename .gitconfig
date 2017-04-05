@@ -98,7 +98,7 @@
   assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 
 [core]
-  editor = vim
+  editor = $EDITOR
   excludesfile = ~/.gitignore.global
   attributesfile = ~/.gitattributes.global
 
