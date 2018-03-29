@@ -1,3 +1,5 @@
+---
+
 role:
   link:
     - ".gitconfig"
@@ -6,4 +8,4 @@ role:
   env:
     git_author_name:
     git_author_email:
-    credential_helper: '{{if eq "$OS" "darwin"}}osxkeychain{{else}}cache{{end}}'
+    credential_helper: '{{if eq .OS "darwin"}}osxkeychain{{else}}cache{{end}}'
