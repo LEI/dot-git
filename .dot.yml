@@ -4,7 +4,8 @@ role:
   link:
     - ".gitconfig"
     - ".gitignore"
-  template: ".gitconfig.local.tpl"
+  template:
+    - ".gitconfig.local.tpl"
   env:
     git_author_name:
     git_author_email:
