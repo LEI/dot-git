@@ -6,7 +6,16 @@
 
 ## Manual installation
 
-    ln -isv "$DOT/.gitconfig" "$HOME"
+Clone and change directory
+
+    git clone https://github.com/LEI/dot-git.git ~/.dot/git && cd $_
+
+Link files to home directory
+
+    ln -isv "~/.dot/git/.gitconfig" "$HOME"
+
+Configure author identity
+
     git config --file "$HOME/.gitconfig.local" -- user.{name,username,email}...
 
 ## Resources
