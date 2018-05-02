@@ -1,6 +1,10 @@
 ---
-
 role:
+  # pkg:
+  #   - name: git
+  #     os: ["!debian"]
+  #   - name: git-core
+  #     os: ["debian"]
   link:
     - ".gitconfig"
     - ".gitignore"
