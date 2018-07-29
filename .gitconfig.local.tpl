@@ -1,9 +1,4 @@
 # ~/.gitconfig.local
-{{range $cond, $path := .include_if -}}
-[includeIf "{{$cond}}"]
-    path = {{$path}}
-
-{{end -}}
 [user]
   name = {{.git_author_name}}
   email = {{.git_author_email}}
@@ -15,5 +10,10 @@
   helper = {{.git_credential_helper}}
 
 [commit]
-  # Sign all commits by default{{/* or .git_commit_gpgsign "false" */}}
-  gpgsign = {{if .git_signing_key}}true{{else}}false{{end}}
+  # Sign all commits by default
+  gpgsign = {{or .git_commit_gpgsign "false"}}{{/*if .git_signing_key}}true{{else}}false{{end*/}}
+{{- range $cond, $path := .include_if}}
+
+[includeIf "{{$cond}}"]
+    path = {{$path}}
+{{- end}}
