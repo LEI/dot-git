@@ -1,0 +1,8 @@
+---
+# git_author_name: Example
+# git_author_email: example@domain.tld
+
+# include_if:
+#   "gitdir:~/work/": "~/.gitconfig-company.local"
+#   "gitdir:~/src/github.com/company/": "~/.gitconfig-company.local"
+#   "gitdir:~/go/src/github.com/company/": "~/.gitconfig-company.local"
