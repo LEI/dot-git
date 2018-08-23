@@ -8,13 +8,12 @@ role:
   template:
     - source: ".gitconfig.local.tpl"
       include_vars: ~/.gitconfig.local.yml
-  env:
-    git_author_name:
-    git_author_email:
-    git_credential_helper: '{{if eq .os "darwin"}}osxkeychain{{else}}cache{{end}}'
-  # vars:
-  #   git_signing_key:
-  #   git_commit_gpgsign:
+  vars:
+    # git_author_name:
+    # git_author_email:
+    git_credential_helper: '{{if eq .OS "darwin"}}osxkeychain{{else}}{{.OS}}{{end}}'
+    # git_signing_key:
+    # git_commit_gpgsign:
   # line: # If not using GPG Suite:
   #   ".bash_profile": "export GPG_TTY=$(tty)"
   # post_install:
