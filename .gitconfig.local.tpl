@@ -12,8 +12,8 @@
 [commit]
 	# Sign all commits by default
 	gpgsign = {{or .git_commit_gpgsign "false"}}{{/*if .git_signing_key}}true{{else}}false{{end*/}}
-{{- range $cond, $path := .include_if}}
+{{- range .include_if}}
 
-[includeIf "{{$cond}}"]
-	path = {{$path}}
+[includeIf "{{.cond}}"]
+	path = {{.path}}
 {{- end}}
