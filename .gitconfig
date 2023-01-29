@@ -167,3 +167,7 @@
 
 [include]
 	path = ~/.gitconfig.local
+
+[ghq]
+	# vcs = git
+	root = ~/src

@@ -1,7 +1,14 @@
 ---
 role:
   pkg:
+    - ghq
     - git
+    # - git-cal
+    - git-extras
+    # - git-sizer
+    # - gitbatch
+    # - lazygit
+    # - nvie/tap/git-toolbelt
   link:
     - ".gitconfig"
     - ".gitignore"
